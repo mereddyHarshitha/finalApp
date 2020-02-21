@@ -13,7 +13,8 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "cors": "*"
+    "cors": "*",
+     "nforce": "*"
   },
   "devDependencies": {
     "request": "^2.81.0",
