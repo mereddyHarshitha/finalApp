@@ -8,6 +8,18 @@
         <!-- Lightning DOM Tag -->
         <div id="lightningLocator" class="lightningLocator"></div>
 
-        <% include ../partials/lightning-out.ejs %>
+        <script>
+          var url = "<%= ouathLightningURL %>";
+          var token = "Bearer "+"<%= oauthtoken %>";
+          console.log(token);
+            $Lightning.use("c:OppLightningWebCompApp", function() {
+                  $Lightning.createComponent("c:opportunityList", {},
+                     "leaderboard",
+                      function(cmp) {
+                         alert('Lightning Out App has loaded!'+token);
+                         
+                      });
+            },url,token );
+        </script>
     </body>
 </html>
